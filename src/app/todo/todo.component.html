@@ -1,0 +1,7 @@
+<!-- <div [ngStyle]="{'background-color':todo?.status?'green':'white'}" class="todo-container"> -->
+  <div class="todo-container" [appMarkCompleted]="todo?.status">
+    <p>Title : {{todo?.title}}</p>
+    <p>Description : {{todo?.description}}</p>
+    <p>Status : {{todo?.status?'Completed':'Pending'}}</p>
+    <button class="btn-dark" [disabled]="todo?.status" (click)="markAsCompleted()">Mark as Completed</button>
+</div>
