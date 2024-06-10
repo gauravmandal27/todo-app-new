@@ -1,0 +1,23 @@
+
+<div *ngIf="todo">
+    <h2>Title : {{todo.title}}</h2>
+        <div class="todo-container" [appMarkCompleted]="todo.status">
+            <p>Id fetched : {{todo.id}}</p>
+            <p>Description : {{todo.description}}</p>
+            <p>Status : {{todo.status?'Completed':'Pending'}}</p>
+            <p>Deadline : {{todo.deadline}}</p>
+            <div>
+                <button class="btn btn-dark"  [disabled]="todo.status">Mark as Completed</button>
+               <!-- <button class="btn btn-danger" (click)="deleteTodo()">Remove</button> -->        
+            </div>
+            <div>
+                <button class="btn btn-dark" (click)="deleteTodo()">Delete</button>
+            </div>
+
+            <div>
+                <button class="btn btn-dark" (click)="toggleEdit()">Edit</button>
+            </div>
+        </div>
+        <app-todo-form-reactive *ngIf=edit [ngModel]=todo></app-todo-form-reactive>
+</div>
+    

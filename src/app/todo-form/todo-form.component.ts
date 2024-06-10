@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Todo } from '../todo.model';
+import { Todo } from '../../models/Todo';
 
 @Component({
   selector: 'app-todo-form',
@@ -9,6 +9,9 @@ import { Todo } from '../todo.model';
 export class TodoFormComponent {
 
   // title?:string;
+
+
+
   @Input("todos")
   todos?:Array<Todo>
 
@@ -16,8 +19,10 @@ export class TodoFormComponent {
   //   this.title=title;
   // }
 
-  addTodo(todo:any){
-      this.todos?.push(todo)
+  addTodo(todo:Todo){
+     todo.status=false;
+     this.todos?.push(todo)
+     
   }
 
 }
