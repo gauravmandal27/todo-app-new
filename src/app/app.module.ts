@@ -18,6 +18,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { ViewTodoComponent } from './view-todo/view-todo.component';
 import { ErrorComponent } from './error/error.component';
 import { ShowdetailsComponent } from './showdetails/showdetails.component';
+import { UpdateTodoComponent } from './update-todo/update-todo.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ShowdetailsComponent } from './showdetails/showdetails.component';
     HomeComponentComponent,
     ViewTodoComponent,
     ErrorComponent,
-    ShowdetailsComponent
+    ShowdetailsComponent,
+    UpdateTodoComponent
   ],
   imports: [
     BrowserModule,
